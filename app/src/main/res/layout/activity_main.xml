@@ -23,4 +23,9 @@
         tools:layout_editor_absoluteX="156dp"
         tools:layout_editor_absoluteY="578dp" />
 
+    <activity
+        android:name="Smile"
+        android:label="@string/smile">
+    </activity>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
