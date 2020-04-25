@@ -2,8 +2,9 @@ package com.example.screens;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class Smile extends AppCompatActivity {
@@ -17,10 +18,16 @@ public class Smile extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         if (extras != null){
-            String name = extras.get("name");
+            String name = extras.getString("name");
             textView.setText(name);
         }
 
-        Button close = findViewById(
+        Button close = findViewById(R.id.close_activity2);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }
