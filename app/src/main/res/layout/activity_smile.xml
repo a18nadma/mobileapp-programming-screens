@@ -6,4 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".Smile">
 
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/close_activity2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Close second activity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/name"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

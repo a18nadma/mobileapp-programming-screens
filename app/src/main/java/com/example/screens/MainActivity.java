@@ -9,20 +9,21 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-   Button button = (Button)findViewById(button);
-   button.setOnClickListener(new View.OnClickListener()
-
-    {
-        @Override
-        public void onClick(View v){
-        startActivity(new Intent(MainActivity.this, Smile.class));
-    }
-    });
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button button = findViewById(R.id.start_activity2);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Smile.class);
+                intent.putExtra("name", "star");
+                startActivity(intent);
+            }
+        });
+
     }
 }
